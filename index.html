@@ -14,6 +14,55 @@
         <h1 class="header__title">BMI Calculator</h1>
         <p class="header__subtitle">Body Mass Index — know your numbers</p>
     </header>
+    <main class="main">
+        <div class="main__form">
+            <form class="main__form__form">
+                <label for="height">Height</label>
+                <input id="height" class="main__form__input" type="number" name="height" placeholder="175">
+                <label for="weight">Weight</label>
+                <input id="weight" class="main__form__input" type="number" name="weight" placeholder="70">
+                <input type="submit" class="main__form__button" value="Calculate BMI">
+            </form>
+        </div>
+        <div class="main__results">
+            <div class="main__results__result">
+                <div class="main__results__result--bmi">
+                    <p class="main__results__result--bmi--value">27.8</p>
+                    <p class="main__results__result--bmi--label">kg / m<sup>2</sup></p>
+                </div>
+                <div class="main__results__result--state">
+                    <span class="warning">Overweight</span>
+                </div>
+            </div>
+            <div class="main__results__cards">
+                <div class="main__results__cards--container">
+                    <div id="low" class="main__results__cards--card">
+                        <p class="main__results__card--label">Underweight</p>
+                        <p class="main__results__card--value">< 18.5</p>
+                    </div>
+                    <div id="normal" class="main__results__cards--card">
+                        <p class="main__results__card--label">Normal weight</p>
+                        <p class="main__results__card--value">18.5 – 24.9</p>
+                    </div>
+                </div>
+                <div class="main__results__cards--container">
+
+                    <div id="overweight" class="main__results__cards--card">
+                        <p class="main__results__card--label">Overweight</p>
+                        <p class="main__results__card--value">25.0 – 29.9</p>
+                    </div>
+                    <div id="obese" class="main__results__cards--card">
+                        <p class="main__results__card--label">Obese</p>
+                        <p class="main__results__card--value">≥ 30.0</p>
+                    </div>
+                </div>
+            </div>
+            <div class="main__results__empty">
+                <div class="main__results__empty--icon"></div>
+                <p class="main_results--empty">Enter your height and weight to see your result</p>
+            </div>
+        </div>
+    </main>
   <script src="js/app.js"></script>
 </body>
 </html>

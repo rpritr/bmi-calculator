@@ -2,6 +2,9 @@
     --bg-color: #EEEDFF;
     --primary-color: #554ABF;
     --secondary-color: #262060;
+    --primary-color-100: #D1CAFB;
+    --primary-color-200: #B0A9F0;
+    --danger-color: #ed4848;
     --warning-color: #FDEFD9;
     --normal-color: #E8F3DD;
     --low-color: #E2F1FC;
@@ -13,7 +16,7 @@ body {
     background-color: var(--bg-color);
 }
 header {
-    min-height: 100px;
+    min-height: 50px;
     padding: 40px;
 }
 .header__title {
@@ -25,4 +28,149 @@ header {
 .header__subtitle {
     color: var(--primary-color);
     font-size: 0.9375em;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main__form {
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+.main__form__form {
+    display: flex;
+flex-direction: column;
+    width: 80%;
+    padding: 20px 100px 50px 100px;
+}
+.main__form__form label {
+    color: var(--primary-color);
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.6875em;
+    margin: 10px 0;
+}
+.main__form__form .main__form__input {
+    background-color: #F5F4FE;
+    border-radius: 15px;
+    border: 1px solid var(--primary-color);
+    padding: 25px;
+    font-size: 2.125em;
+    color: var(--secondary-color);
+}
+.main__form__form .main__form__button {
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 15px;
+    padding: 25px;
+    color: var(--bg-color);
+    margin-top: 30px;
+
+}
+.main__form__form .main__form__button:hover {
+    background-color: var(--secondary-color);
+}
+.main__results {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--primary-color-100);
+    min-height: 90vh;
+}
+.main__results__empty--icon {
+    background-color: var(--primary-color-200);
+    height: 100px;
+    border-radius: 50%;
+    width: 100px;
+}
+.main_results--empty {
+    color: var(--primary-color);
+    margin-top: 20px;
+    font-weight: 500;
+    width: 200px;
+}
+.main__results__empty {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.main__results__result {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.main__results__result--bmi
+{
+    background-color: var(--bg-color);
+    height: 100px;
+    border-radius: 50%;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+sup {
+    vertical-align: super;
+    font-size: smaller;
+}
+.main__results__result--bmi--value
+{
+    font-size: 2.125em;
+}
+.main__results__result--bmi--label
+{
+   font-size: 0.75em;
+}
+.main__results__result--state span {
+    border-radius: 5px;
+    padding: 5px;
+}
+.low-warning {
+    background-color: var(--low-color);
+}
+.warning {
+    background-color: var(--warning-color);
+}
+.normal {
+    background-color: var(--normal-color);
+}
+.danger {
+    background-color: var(--danger-color);
+}
+
+.main__results__cards--container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main__results__cards--card {
+    background-color: var(--bg-color);
+    padding: 15px 20px;
+    border-radius: 10px;
+    border: 1px solid var(--primary-color);
+    width: 50%;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+.selected {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+}
+.main__results__cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    width: 100%;
 }
