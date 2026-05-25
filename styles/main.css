@@ -166,6 +166,10 @@ sup {
 }
 /* e: general */
 
+footer {
+    text-align: center;
+    margin:20px;
+}
 @media only screen and (max-width: 800px) {
     .main {
         flex-direction: column;
