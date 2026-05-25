@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <title>BMI Calculator</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,17 +14,17 @@
     <header class="header">
         <h1 class="header__title">BMI Calculator</h1>
         <p class="header__subtitle">Body Mass Index — know your numbers</p>
-    </header>
+    </header> <!-- e: heder -->
     <main class="main">
         <div class="main__form">
             <form class="main__form__form">
                 <label for="height">Height</label>
-                <input id="height" class="main__form__input" type="number" name="height" placeholder="175">
+                <input id="height" class="main__form__input" type="number" name="height" placeholder="175" min="0">
                 <label for="weight">Weight</label>
-                <input id="weight" class="main__form__input" type="number" name="weight" placeholder="70">
+                <input id="weight" class="main__form__input" type="number" name="weight" placeholder="70"  min="0">
                 <input type="submit" class="main__form__button" value="Calculate BMI">
             </form>
-        </div>
+        </div>  <!-- e: main__form -->
         <div class="main__results">
             <div class="main__results__result">
                 <div class="main__results__result--bmi">
@@ -33,7 +34,7 @@
                 <div class="main__results__result--state">
                     <span class="warning">Overweight</span>
                 </div>
-            </div>
+            </div> <!-- e: main__results__result -->
             <div class="main__results__cards">
                 <div class="main__results__cards--container">
                     <div id="low" class="main__results__cards--card">
@@ -44,7 +45,7 @@
                         <p class="main__results__card--label">Normal weight</p>
                         <p class="main__results__card--value">18.5 – 24.9</p>
                     </div>
-                </div>
+                </div> <!-- e: main__results__cards--container -->
                 <div class="main__results__cards--container">
 
                     <div id="overweight" class="main__results__cards--card">
@@ -55,13 +56,13 @@
                         <p class="main__results__card--label">Obese</p>
                         <p class="main__results__card--value">≥ 30.0</p>
                     </div>
-                </div>
-            </div>
+                </div> <!-- e: main__results__cards--container -->
+            </div> <!-- e: main__results__cards -->
             <div class="main__results__empty">
                 <div class="main__results__empty--icon"></div>
                 <p class="main_results--empty">Enter your height and weight to see your result</p>
             </div>
-        </div>
+        </div> <!-- e: main__results -->
     </main>
   <script src="js/app.js"></script>
 </body>

@@ -4,7 +4,7 @@
     --secondary-color: #262060;
     --primary-color-100: #D1CAFB;
     --primary-color-200: #B0A9F0;
-    --danger-color: #ed4848;
+    --danger-color: #f48c8c;
     --warning-color: #FDEFD9;
     --normal-color: #E8F3DD;
     --low-color: #E2F1FC;
@@ -29,7 +29,7 @@ header {
     color: var(--primary-color);
     font-size: 0.9375em;
 }
-
+ /* main */
 .main {
     display: flex;
     justify-content: space-between;
@@ -39,12 +39,13 @@ header {
     display: flex;
     align-items: center;
     width: 50%;
+    justify-content: center;
 }
 .main__form__form {
     display: flex;
 flex-direction: column;
     width: 80%;
-    padding: 20px 100px 50px 100px;
+    padding: 20px;
 }
 .main__form__form label {
     color: var(--primary-color);
@@ -70,9 +71,7 @@ flex-direction: column;
     margin-top: 30px;
 
 }
-.main__form__form .main__form__button:hover {
-    background-color: var(--secondary-color);
-}
+.main__form__form .main__form__button:hover { background-color: var(--secondary-color); }
 .main__results {
     width: 50%;
     display: flex;
@@ -118,33 +117,12 @@ flex-direction: column;
     justify-content: center;
     flex-direction: column;
 }
-sup {
-    vertical-align: super;
-    font-size: smaller;
-}
-.main__results__result--bmi--value
-{
-    font-size: 2.125em;
-}
-.main__results__result--bmi--label
-{
-   font-size: 0.75em;
-}
+
+.main__results__result--bmi--value  {font-size: 2.125em; }
+.main__results__result--bmi--label  { font-size: 0.75em; }
 .main__results__result--state span {
     border-radius: 5px;
     padding: 5px;
-}
-.low-warning {
-    background-color: var(--low-color);
-}
-.warning {
-    background-color: var(--warning-color);
-}
-.normal {
-    background-color: var(--normal-color);
-}
-.danger {
-    background-color: var(--danger-color);
 }
 
 .main__results__cards--container {
@@ -173,4 +151,28 @@ sup {
     justify-content: center;
     margin-top: 40px;
     width: 100%;
+}
+/* e: main */
+
+/* general */
+
+.low-warning { background-color: var(--low-color); }
+.warning { background-color: var(--warning-color); }
+.normal { background-color: var(--normal-color); }
+.danger { background-color: var(--danger-color); }
+sup {
+    vertical-align: super;
+    font-size: smaller;
+}
+/* e: general */
+
+@media only screen and (max-width: 800px) {
+    .main {
+        flex-direction: column;
+    }
+    .main__form {
+        width: 100%;
+        flex-direction: column;
+    }
+    .main__results { width: 100%; }
 }

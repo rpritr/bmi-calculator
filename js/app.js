@@ -8,8 +8,8 @@ const empty = document.getElementsByClassName("main__results__empty")[0];
 const stateElement = document.querySelector(".main__results__result--state span");
 results.style.display = "none";
 cards.style.display = "none";
-console.log(stateElement);
 
+// input: state, returns string
 function getStateFromBMI(bmi)
 {
     let state = "";
@@ -26,6 +26,7 @@ function getStateFromBMI(bmi)
     }
     return state;
 }
+// input: state, returns string
 function setColorFromState(state) {
     if(state === "Underweight"){
         stateElement.className = "low-warning";
@@ -36,8 +37,8 @@ function setColorFromState(state) {
     } else if (state === "Obese"){
         stateElement.className = "danger";
     }
-
 }
+// input: state, set class for static element
 function setSelectedState(state) {
     document.getElementById("low").classList.remove("selected");
     document.getElementById("normal").classList.remove("selected");
@@ -54,25 +55,19 @@ function setSelectedState(state) {
         document.getElementById("obese").classList.add("selected");
     }
 }
-
+// event for processing form
 submit.addEventListener('click', function(e) {
     e.preventDefault();
     const height = form.elements.height.value;
     const weight = form.elements.weight.value;
-
-    console.log(height);
-    console.log(weight);
-
     const bmi = weight / ((height/100) * (height/100));
 
-    console.log(bmi);
     bmiElement.innerHTML = bmi.toPrecision(4);
-    console.log(bmiElement);
     results.style.display = "flex";
     cards.style.display = "flex";
     empty.style.display = "none";
-    console.log(getStateFromBMI(bmi));
-    stateElement.innerHTML = getStateFromBMI(bmi);
-    setColorFromState(getStateFromBMI(bmi));
-    setSelectedState(getStateFromBMI(bmi));
+    const state = getStateFromBMI(bmi);
+    stateElement.innerHTML = state;
+    setColorFromState(state);
+    setSelectedState(state);
 })
